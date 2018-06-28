@@ -34,8 +34,8 @@ qeasy $thresholds $b $b
 dl=$a.dl.tif
 dr=$a.dr.tif
 dlr=$a.dlr.tif
-tvl1flow $a $b $dl 0 0.3 0.15 0.3 9 0.5 3 0.01 1
-tvl1flow $b $a $dr 0 0.3 0.15 0.3 9 0.5 3 0.01 1
+tvl1flow $a $b $dl $5 #0 0.3 0.15 0.3 9 0.5 3 0.01 1
+tvl1flow $b $a $dr $5 #0 0.3 0.15 0.3 9 0.5 3 0.01 1
 backflow $dl $dr $dlr
 plambda $dl $dlr "x y + split hypot 1 < 255 *" -o $mask
 
